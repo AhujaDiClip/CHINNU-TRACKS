@@ -51,6 +51,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            min-height: 100dvh; /* Fix for iPhone Safari */
             overflow: hidden; 
             overscroll-behavior-y: none;
             transition: all 0.5s ease;
@@ -58,19 +59,23 @@
 
         .phone-mockup {
             background-color: var(--phone-bg); 
-            width: 100%;
+            width: 72%; /* Double side spacing (pehle 86% tha) */
             max-width: 420px;
-            height: 100vh;
+            height: 64vh; /* Fallback: Double vertical space (pehle 82vh tha) */
+            height: 64dvh; /* iPhone browser ke liye perfect double space */
+            border-radius: 40px; /* Thode aur round corners */
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             position: relative;
-            box-shadow: 0 0 40px rgba(0,0,0, 0.1);
+            box-shadow: 0 12px 45px rgba(0,0,0, 0.15);
             transition: background-color 0.5s ease;
         }
 
         @media (min-width: 450px) {
             .phone-mockup {
                 height: 90vh;
+                width: 100%;
                 border-radius: 40px;
                 border: 8px solid #ffffff;
                 box-shadow: 0 15px 35px rgba(0,0,0, 0.2);
