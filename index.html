@@ -59,16 +59,16 @@
 
         .phone-mockup {
             background-color: var(--phone-bg); 
-            width: 72%; /* Double side spacing (pehle 86% tha) */
+            width: 94%; /* Added side spacing */
             max-width: 420px;
-            height: 64vh; /* Fallback: Double vertical space (pehle 82vh tha) */
-            height: 64dvh; /* iPhone browser ke liye perfect double space */
-            border-radius: 40px; /* Thode aur round corners */
+            height: 94vh; /* Fallback */
+            height: 94dvh; /* Top & bottom spacing specifically for mobile browsers */
+            border-radius: 35px; /* Rounded corners for the floating card look */
             overflow: hidden;
             display: flex;
             flex-direction: column;
             position: relative;
-            box-shadow: 0 12px 45px rgba(0,0,0, 0.15);
+            box-shadow: 0 10px 40px rgba(0,0,0, 0.15);
             transition: background-color 0.5s ease;
         }
 
